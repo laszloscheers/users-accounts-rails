@@ -62,6 +62,7 @@ group :development do
 
   # Use sqlite3 as the database for Active Record
   gem "sqlite3", "~> 1.4"
+
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
@@ -71,6 +72,7 @@ end
 group :production do
   # Pg is the Ruby interface to the PostgreSQL RDBMS. It works with PostgreSQL 9.3 and later.
   gem 'pg', '~> 1.3', '>= 1.3.5'
+  gem 'rails_12factor'
 end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
