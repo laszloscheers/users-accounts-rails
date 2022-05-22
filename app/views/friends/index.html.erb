@@ -1,0 +1,30 @@
+<p style="color: green"><%= notice %></p>
+
+<div id="friends">
+  <table class="table table-striped table-bordered">
+    <thead class="table-dark">
+      <tr >
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Twitter</th>
+        <th scope="col">User Id</th>
+        <th colspan="2"></th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <% @friends.each do |friend| %>
+        <% if friend.user == current_user %>
+          <tr>
+            <%= render friend %>
+            <td><%= link_to "Show this friend", friend, class: "btn btn-secondary" %></td>
+            <td><%= link_to "Edit this friend", edit_friend_path(friend), class: "btn btn-secondary" %></td>
+            <td><%= button_to "Destroy this friend", friend, method: :delete, class: "btn btn-secondary" %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<%= link_to "New friend", new_friend_path, class: "btn btn-secondary" %>
