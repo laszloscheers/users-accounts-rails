@@ -25,6 +25,21 @@
         <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
       </div>
       <br/>
+      <div class="field form-group">
+        <%= f.label :first_name %><br />
+        <%= f.text_field :first_name, autocomplete: "first-name", class: "form-control", placeholder: "Your name" %>
+      </div>
+      <br/>
+      <div class="field form-group">
+        <%= f.label :second_name %><br />
+        <%= f.text_field :second_name, autocomplete: "second_name", class: "form-control", placeholder: "Your surname" %>
+      </div>
+      <br/>
+      <div class="field form-group">
+        <%= f.label :dob %><br />
+        <%= f.date_field :dob, autocomplete: "dob", class: "form-control", placeholder: "Your Date of birth" %>
+      </div>
+      <br/>
       <div class="actions">
         <%= f.submit "Sign up", class: "btn btn-secondary" %>
       </div>
